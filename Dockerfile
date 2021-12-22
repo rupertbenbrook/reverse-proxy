@@ -1,0 +1,10 @@
+FROM nginx
+ENV PROXY_HOST=example.com
+ENV PROXY_CERT_COUNTRY=GB
+ENV PROXY_CERT_STATE=Berkshire
+ENV PROXY_CERT_LOCATION=Bracknell
+ENV PROXY_CERT_ORGANIZATION=Organization
+ENV PROXY_CERT_DEPT=Development
+ENV PROXY_ORIGIN_PROTOCOL=http
+ENV PROXY_ORIGIN_HOST=ifconfig.co
+COPY configure.sh /docker-entrypoint.d/
